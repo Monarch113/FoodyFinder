@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FoodyFinder - Discover your food preferences">
+  <title>Food Preferences Quiz | FoodyFinder</title>
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/quiz.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo-link">
+      <img src="../assets/FoodyFinder_Title.png" alt="FoodyFinder Logo" class="logo-img">
+    </a>
+    <nav class="auth-buttons">
+      <a href="login.html" class="btn login-btn">Login</a>
+      <a href="signup.html" class="btn signup-btn">Sign Up</a>
+    </nav>  
+  </header>
+
+  <main class="quiz-main">
+    <div class="quiz-container">
+      <h1><i class="fas fa-utensils"></i> Food Preferences Quiz</h1>
+      
+      <!-- Progress Bar -->
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <form id="foodQuiz" action="index.html" method="GET">
+        <!-- Question 1 -->
+        <div class="quiz-question-container">
+          <p><i class="fas fa-star"></i> Which flavor do you prefer most?</p>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="flavor" value="sweet" required />
+              <i class="fas fa-cookie"></i> Sweet
+            </label>
+            <label>
+              <input type="radio" name="flavor" value="savory" />
+              <i class="fas fa-drumstick-bite"></i> Savory
+            </label>
+            <label>
+              <input type="radio" name="flavor" value="spicy" />
+              <i class="fas fa-pepper-hot"></i> Spicy
+            </label>
+            <label>
+              <input type="radio" name="flavor" value="sour" />
+              <i class="fas fa-lemon"></i> Sour
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-question-container">
+          <p><i class="fas fa-heart"></i> Do you follow any dietary preferences?</p>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="diet" value="vegetarian" />
+              <i class="fas fa-seedling"></i> Vegetarian
+            </label>
+            <label>
+              <input type="radio" name="diet" value="vegan" />
+              <i class="fas fa-leaf"></i> Vegan
+            </label>
+            <label>
+              <input type="radio" name="diet" value="gluten-free" />
+              <i class="fas fa-bread-slice"></i> Gluten-Free
+            </label>
+            <label>
+              <input type="radio" name="diet" value="no-preference" />
+              <i class="fas fa-utensils"></i> No preference
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="quiz-question-container">
+          <p><i class="fas fa-globe-asia"></i> Which cuisines do you enjoy?</p>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="cuisine" value="italian" />
+              <i class="fas fa-pizza-slice"></i> Italian
+            </label>
+            <label>
+              <input type="radio" name="cuisine" value="japanese" />
+              <i class="fas fa-fish"></i> Japanese
+            </label>
+            <label>
+              <input type="radio" name="cuisine" value="mexican" />
+              <i class="fas fa-pepper-hot"></i> Mexican
+            </label>
+            <label>
+              <input type="radio" name="cuisine" value="indian" />
+              <i class="fas fa-pepper-hot"></i> Indian
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quiz-question-container">
+          <p><i class="fas fa-clock"></i> What's your preferred meal time?</p>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="mealTime" value="breakfast" />
+              <i class="fas fa-coffee"></i> Breakfast
+            </label>
+            <label>
+              <input type="radio" name="mealTime" value="lunch" />
+              <i class="fas fa-sun"></i> Lunch
+            </label>
+            <label>
+              <input type="radio" name="mealTime" value="dinner" />
+              <i class="fas fa-moon"></i> Dinner
+            </label>
+            <label>
+              <input type="radio" name="mealTime" value="snacks" />
+              <i class="fas fa-cookie-bite"></i> Snacks
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 5 (New) -->
+        <div class="quiz-question-container">
+          <p><i class="fas fa-tags"></i> What type of food reviews are you most interested in?</p>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="reviewPreference" value="popular" />
+              <i class="fas fa-fire"></i> Popular & Trending
+            </label>
+            <label>
+              <input type="radio" name="reviewPreference" value="authentic" />
+              <i class="fas fa-award"></i> Authentic Local
+            </label>
+            <label>
+              <input type="radio" name="reviewPreference" value="budget" />
+              <i class="fas fa-wallet"></i> Budget-Friendly
+            </label>
+            <label>
+              <input type="radio" name="reviewPreference" value="luxury" />
+              <i class="fas fa-crown"></i> High-End Dining
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">
+          <i class="fas fa-check-circle"></i> Finish Quiz
+        </button>
+      </form>
+
+      <!-- Thank You Message and Loading Animation -->
+      <div id="thankYouSection" class="thank-you-section hidden">
+        <h2>Thank You for Completing the Quiz!</h2>
+        <p>Redirecting to the main page...</p>
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FoodyFinder. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

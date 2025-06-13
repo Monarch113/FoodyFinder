@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FoodyFinder - Review your favorite dishes">
+  <title>Vegan Buddha Bowl Review | FoodyFinder</title>
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/review.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo-link">
+      <img src="../assets/FoodyFinder_Title.png" alt="FoodyFinder Logo" class="logo-img">
+    </a>
+    <nav class="auth-buttons">
+      <a href="login.html" class="btn login-btn">Login</a>
+      <a href="signup.html" class="btn signup-btn">Sign Up</a>
+    </nav>  
+  </header>
+
+  <div class="review-page-container">
+    <!-- Restaurant Location & Map -->
+    <section class="location-section">
+      <h1><i class="fas fa-map-marker-alt"></i> Green Kitchen</h1>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Green+Kitchen&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Meal Description -->
+    <section class="meal-info">
+      <h2>🥗 Vegan Buddha Bowl</h2>
+      <p class="price">💲Rp. 92.000</p>
+      <p class="description">A vibrant and healthy bowl packed with fresh vegetables, quinoa, and a savory dressing.</p>
+      <div class="tags">
+        <span class="tag">Vegan</span>
+        <span class="tag">Healthy</span>
+        <span class="tag">Gluten-Free</span>
+        <span class="tag">Fresh</span>
+        <span class="tag">Clean-Eating</span>
+      </div>
+    </section>
+
+    <!-- User Reviews -->
+    <section class="reviews">
+      <h2><i class="fas fa-star"></i> User Reviews</h2>
+
+      <!-- Review 1 -->
+      <div class="review">
+        <img src="../assets/veganbowl.jpg" alt="Review 1 photo" />
+        <div class="review-content">
+          <p>@healthyeater</p>
+          <div class="review-tags">
+            <span class="tag">Healthy</span>
+            <span class="tag">Fresh</span>
+          </div>
+          <p class="stars">⭐⭐⭐⭐⭐</p>
+          <p>
+            "So fresh and satisfying! A perfect healthy meal option. Loved the variety of veggies."
+          </p>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review">
+        <img src="../assets/veganbowl.jpg" alt="Review 2 photo" />
+        <div class="review-content">
+          <p>@vegan_life</p>
+          <div class="review-tags">
+            <span class="tag">Vegan</span>
+            <span class="tag">Delicious</span>
+          </div>
+          <p class="stars">⭐⭐⭐⭐</p>
+          <p>
+            "Great vegan option, very flavorful. A bit on the pricier side but good quality ingredients."
+          </p>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review">
+        <img src="../assets/veganbowl.jpg" alt="Review 3 photo" />
+        <div class="review-content">
+          <p>@green_gourmet</p>
+          <div class="review-tags">
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">Nutritious</span>
+          </div>
+          <p class="stars">⭐⭐⭐⭐⭐</p>
+          <p>
+            "Excellent choice for a light yet filling meal. Everything was perfectly prepared and tasted amazing."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="write-review">
+      <h2><i class="fas fa-pen-alt"></i> Write a Review</h2>
+      <form id="reviewForm">
+        <label for="rating"><i class="fas fa-star"></i> Star Rating:</label>
+        <select id="rating" name="rating" required>
+          <option value="">-- Select --</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select>
+
+        <label for="tags"><i class="fas fa-tags"></i> Tags (comma separated):</label>
+        <input type="text" id="tags" name="tags" placeholder="e.g. Cheesy, Spicy, Vegetarian" />
+
+        <label for="photo"><i class="fas fa-camera"></i> Upload a photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" />
+
+        <label for="reviewText"><i class="fas fa-comment-alt"></i> Your Review:</label>
+        <textarea id="reviewText" name="reviewText" rows="4" required placeholder="Share your thoughts..."></textarea>
+
+        <button type="submit"><i class="fas fa-paper-plane"></i> Submit Review</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html> 

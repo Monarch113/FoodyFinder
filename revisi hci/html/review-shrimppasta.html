@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FoodyFinder - Review your favorite dishes">
+  <title>Garlic Butter Shrimp Pasta Review | FoodyFinder</title>
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/review.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo-link">
+      <img src="../assets/FoodyFinder_Title.png" alt="FoodyFinder Logo" class="logo-img">
+    </a>
+    <nav class="auth-buttons">
+      <a href="login.html" class="btn login-btn">Login</a>
+      <a href="signup.html" class="btn signup-btn">Sign Up</a>
+    </nav>  
+  </header>
+
+  <div class="review-page-container">
+    <!-- Restaurant Location & Map -->
+    <section class="location-section">
+      <h1><i class="fas fa-map-marker-alt"></i> Pasta Haven</h1>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Pasta+Haven&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Meal Description -->
+    <section class="meal-info">
+      <h2>🍝 Garlic Butter Shrimp Pasta</h2>
+      <p class="price">💲Rp. 66.000</p>
+      <p class="description">Linguine tossed in a rich garlic butter sauce with succulent shrimp and a hint of parsley.</p>
+      <div class="tags">
+        <span class="tag">Seafood</span>
+        <span class="tag">Italian</span>
+        <span class="tag">Garlic</span>
+        <span class="tag">Savory</span>
+        <span class="tag">Dinner</span>
+      </div>
+    </section>
+
+    <!-- User Reviews -->
+    <section class="reviews">
+      <h2><i class="fas fa-star"></i> User Reviews</h2>
+
+      <!-- Review 1 -->
+      <div class="review">
+        <img src="../assets/shrimppasta.jpg" alt="Review 1 photo" />
+        <div class="review-content">
+          <p>@pasta_fanatic</p>
+          <div class="review-tags">
+            <span class="tag">Garlic</span>
+            <span class="tag">Rich</span>
+          </div>
+          <p class="stars">⭐⭐⭐⭐⭐</p>
+          <p>
+            "The shrimp were perfectly cooked and the garlic butter sauce was incredibly flavorful. A pasta dream!"
+          </p>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review">
+        <img src="../assets/shrimppasta.jpg" alt="Review 2 photo" />
+        <div class="review-content">
+          <p>@seafood_lover</p>
+          <div class="review-tags">
+            <span class="tag">Seafood</span>
+            <span class="tag">Delicious</span>
+          </div>
+          <p class="stars">⭐⭐⭐⭐</p>
+          <p>
+            "Really enjoyed this pasta. The shrimp were fresh and the sauce was creamy. Would order again."
+          </p>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review">
+        <img src="../assets/shrimppasta.jpg" alt="Review 3 photo" />
+        <div class="review-content">
+          <p>@food_adventurer</p>
+          <div class="review-tags">
+            <span class="tag">Italian</span>
+            <span class="tag">Comfort-Food</span>
+          </div>
+          <p class="stars">⭐⭐⭐⭐⭐</p>
+          <p>
+            "Fantastic garlic butter flavor, and the pasta was perfectly al dente. A truly comforting meal."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="write-review">
+      <h2><i class="fas fa-pen-alt"></i> Write a Review</h2>
+      <form id="reviewForm">
+        <label for="rating"><i class="fas fa-star"></i> Star Rating:</label>
+        <select id="rating" name="rating" required>
+          <option value="">-- Select --</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select>
+
+        <label for="tags"><i class="fas fa-tags"></i> Tags (comma separated):</label>
+        <input type="text" id="tags" name="tags" placeholder="e.g. Cheesy, Spicy, Vegetarian" />
+
+        <label for="photo"><i class="fas fa-camera"></i> Upload a photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" />
+
+        <label for="reviewText"><i class="fas fa-comment-alt"></i> Your Review:</label>
+        <textarea id="reviewText" name="reviewText" rows="4" required placeholder="Share your thoughts..."></textarea>
+
+        <button type="submit"><i class="fas fa-paper-plane"></i> Submit Review</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html> 
